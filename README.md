@@ -7,7 +7,7 @@ August 31, 2022<br/>
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="Images/MarsRover.jpg">
+  <img width="460" height="200" src="Images/MarsRover.jpeg">
 </p>
 <br/>
 ## Overview of the Project

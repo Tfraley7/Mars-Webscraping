@@ -7,7 +7,7 @@ August 31, 2022<br/>
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="MarsRover.jpg">
+  <img width="460" height="200" src="Images/MarsRover.jpg">
 </p>
 <br/>
 ## Overview of the Project
@@ -20,14 +20,14 @@ To gather my news data I first started by scraping the titles and preview text f
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="BeautifulSoup.png">
+  <img width="460" height="200" src="Images/BeautifulSoup.png">
 </p>
 <br/>
 Once this proces was completed I began scraping information from the Mars News web page. To start off I used my html parser "quote_soup." By simply typing quote_soup and then pressing shift + enter I was able to see all of the HTML elements on the web page. To make the process quick and painless I clicked into the printed box of HTML information on my jupyter notebook, pressed command +F and searched for "title."<br/>
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="find_title.png">
+  <img width="460" height="200" src="Images/find_title.png">
 </p>
 <br/>
 By searching for the titles of the news articles I was able to quickly go straight to my html tags. This is quicker, because if I had inspected the web page then I would have had to go through each html tags. In this case I knew I wanted to extract the titles and preview of the content. 
@@ -36,7 +36,7 @@ Next, I wanted to gather the titles and the summary text information. To do this
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="no_get_text.png">
+  <img width="460" height="200" src="Images/no_get_text.png">
 </p>
 <br/>
 This doesn't work for the full analysis process to make everything nice and neat. So I had to remove the HTML tags. To do this I used the get_text function to make everything nice and neat. 
@@ -44,7 +44,7 @@ This doesn't work for the full analysis process to make everything nice and neat
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="get_text.png">
+  <img width="460" height="200" src="Images/get_text.png">
 </p>
 <br/>
 Now that I have my content summaries and my titles all in lists with their own name. I can create my dictionary. To create my mars_news dictionary I used a for loop to gather the lists. However, when printing this dictionary everything printed together almost like a paragraph. To switched from print() function to just simply typing mars_news without the print function and then hit command + enter.
@@ -52,7 +52,7 @@ Now that I have my content summaries and my titles all in lists with their own n
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="get_text.png">
+  <img width="460" height="200" src="Images/get_text.png">
 </p>
 <br/>
 Finally, at the end of the process. I now have all of my Mars news in a dictionary format. To complete this process I exported the data into MongoDB for safe keeping.
@@ -63,7 +63,7 @@ The first thing I needed to do to be able to go scrape the data into a pandas da
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="mars_df.png">
+  <img width="460" height="200" src="Images/mars_df.png">
 </p>
 <br/>
 At this point in the analysis it was important for me to inspect my data frame. First, I wanted to change my column titles to make them a bit cleaner so I added capitol letters instead of leaving them all as lower case, because I am a bit OCD like that. I then converted the data type for the values in each column. 

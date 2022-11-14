@@ -67,4 +67,50 @@ The first thing I needed to do to be able to go scrape the data into a pandas da
 </p>
 <br/>
 At this point in the analysis it was important for me to inspect my data frame. First, I wanted to change my column titles to make them a bit cleaner so I added capitol letters instead of leaving them all as lower case, because I am a bit OCD like that. I then converted the data type for the values in each column. 
-To continue my research I wante dto first figure out how many Earth days ('Terrestrial_Date') exist. First I analysed the 'Sol' column which contains the number of martian days. Using the n.unique() function in my mars_df I was able to find that there were 1867 days in the data set. Next, I wanted to figure out how many days there were in a martian year.  
+To continue my research I wante dto first figure out how many Earth days ('Terrestrial_Date') exist. First I analysed the 'Sol' column which contains the number of martian days. Using the n.unique() function in my mars_df I was able to find that there were 1867 days in the data set. 
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/MarsMonths_TDATE.png">
+</p>
+<br/>
+At this point in the study I was ready to start studying hte average temps by months on mars. However, I should note that this was done through a for loop. Using the range function at the beginning of my for loop I chose a range of 1-13 to itterate through. From this point I created a dictionary ("avg_monthly_temp") which would observe the "Mars_Month" and the "Temp_AVG" as keys/values in the dictionary. To get teh average temperature I used iloc[] for the month column to allow me to have a 12 month span and then I upgraded the function by adding the average minimum temp as well (avg_temp = mars_df.loc[mars_df['Month']== i]['Min_temp'].mean()). Next up was dropping any unnecessary values by rounding avg_temp, and adding the 12 months and the rounded average temp to my avg_monthly_temp dictionary. Finally I appended the avg_monthly_temp to a new variable called "temp_mars." Which was then converted into a data frame called "temp_mars_df." Now I could plot the data in a bar graph as follows:
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/Mars_AVG_Temps.png">
+</p>
+<br/>
+Moving forward with the analysis I wanted to figure out which months were hottest and coldest on Mars. To do this I looked at temp_mars_df["Temp_AVG"] and then added .max() for the hottest month and then .min() for the coldest month. I also was able to find the average temp by using .mean().
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/Mars_Temps.png">
+</p>
+<br/>
+Now in the analysis I was tasked with figuring out the atmospheric pressure for mars. To do this I used a for loop just lik ethe one that I used for the temperature data. However, for this for loop I used "Pressure" as a value with my keys. After adding this data to a data frame I was able to plot the data in a bar graph. 
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/Mars_AVG_Pressure.png">
+</p>
+<br/>
+At this point I was getting close to the end of my analysis. However, I wanted to figure out how many days there were in a martian year. Which was approximately 686 terrestrial days. I would later use this data in my analysis, but for now, here is how that data was gathered. 
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/Days_on_Mars.png">
+</p>
+<br/>
+Finally, at the end of my study I looked at the minimum temp by day on Mars. I plotted it with "Sol" as my x values and "Min_temp" as my y values. This was a lot easier to do than the other graphs. However, this graph had to be plotted in a line graph for readability reasons. 
+<br/>
+<p/>
+<br/>
+<p align="center">
+  <img width="460" height="200" src="Images/Mars_Min_Temp_Days.png">
+</p>
